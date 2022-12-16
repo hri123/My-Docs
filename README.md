@@ -63,3 +63,14 @@ mkdocs gh-deploy --force
 ### Check for auto deploy errors
 
 https://github.com/hri123/My-Docs/actions/workflows/ci.yml
+
+
+### Check for any secrets in the docs before checking in
+
+```
+pip install --user git+https://github.com/ibm/detect-secrets.git@master#egg=detect-secrets
+
+pip install --upgrade --user git+https://github.com/ibm/detect-secrets.git@master#egg=detect-secrets
+
+/Users/hrishikesh/Library/Python/3.9/bin/detect-secrets scan --all-files . --update .secrets.baseline --use-all-plugins --exclude-files "package-lock.json"
+```
