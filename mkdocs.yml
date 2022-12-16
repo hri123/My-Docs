@@ -1,5 +1,15 @@
+# Project information
 site_name: My Docs
+site_url: https://hri123.github.io/My-Docs/
+site_author: Hrishikesh
+site_description: >-
+  My Notes / My Docs / My Information
 
+# Repository
+repo_name: hri123/My-Docs
+repo_url: https://github.com/hri123/My-Docs
+
+# Theme
 theme:
   features:
     - navigation.instant
@@ -8,5 +18,5 @@ theme:
   name: material
   palette:
     - scheme: default
-      primary: blue grey
-      accent: light blue
+      primary: indigo
+      accent: indigo
