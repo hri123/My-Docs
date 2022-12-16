@@ -60,3 +60,6 @@ https://lunrjs.com/guides/searching.html
 mkdocs gh-deploy --force
 ```
 
+### Check for auto deploy errors
+
+https://github.com/hri123/My-Docs/actions/workflows/ci.yml

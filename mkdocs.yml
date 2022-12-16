@@ -20,3 +20,5 @@ theme:
     - scheme: default
       primary: indigo
       accent: indigo
+
+edit_uri: 'blob/main/docs/'
