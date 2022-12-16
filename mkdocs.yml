@@ -1,1 +1,12 @@
 site_name: My Docs
+
+theme:
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+  name: material
+  palette:
+    - scheme: default
+      primary: blue grey
+      accent: light blue
