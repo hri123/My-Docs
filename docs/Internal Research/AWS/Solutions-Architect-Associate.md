@@ -12,6 +12,29 @@ Design Secure Architectures: Question 45
 
 - **Amazon GuardDuty**: Amazon GuardDuty is a threat detection service that continuously monitors for malicious activity and unauthorized behavior to protect your AWS accounts, workloads, and data stored in Amazon S3. The service uses machine learning, anomaly detection, and integrated threat intelligence to identify and prioritize potential threats. GuardDuty analyzes tens of billions of events across multiple AWS data sources, such as AWS CloudTrail events, Amazon VPC Flow Logs, and DNS logs.
 
+- **Amazon Macie**:
+    - data security and data privacy service that uses machine learning and pattern matching to discover and protect your sensitive data on Amazon S3
+
+- **Miscellaneous**:
+    - You can use IAM roles to access cross-account resources.
+
+    - If the IAM role that you create for the Lambda function is in the same AWS account as the bucket, then you don't need to grant Amazon S3 permissions on both the IAM role and the bucket policy. Instead, you can grant the permissions on the IAM role and then verify that the bucket policy doesn't explicitly deny access to the Lambda function role. If the IAM role and the bucket are in different accounts, then you need to grant Amazon S3 permissions on both the IAM role and the bucket policy.
+
+    - With ACLs, you can only grant other AWS accounts (not specific users) access to your Amazon S3 resources. 
+
+## Security
+
+- **AWS Certificate Manager**:
+    - provision, manage, and deploy public and private Secure Sockets Layer/Transport Layer Security (SSL/TLS) certificates for use with AWS services and your internal connected resources
+    - ACM does not attempt to renew third-party certificates that are imported
+    - Any SSL/TLS certificates created via ACM do not need any monitoring/intervention for expiration. ACM automatically renews such certificates
+    - Amazon CloudWatch metrics and Amazon EventBridge events are enabled for all certificates that are managed by ACM.
+
+- **AWS Config**:
+    - creates configuration items for every supported resource in the region, and generates configuration items when the configuration of a resource changes
+    - AWS Config rules
+        - When AWS Config evaluates your resources (on change or periodically), it invokes the rule's AWS Lambda function. If a resource violates the conditions of a rule, AWS Config flags the resource and the rule as noncompliant. AWS Config sends a notification to your Amazon SNS topic.
+
 
 
 ## S3
@@ -97,6 +120,34 @@ Design Secure Architectures: Question 45
 
 - **VPN CloudHub** operates on a simple hub-and-spoke model that you can use with or without a VPC
 
+- **transit gateway**
+    - A transit gateway is a network transit hub that you can use to interconnect VPCs and on-premises networks, **VPC peering** between all VPCs is an inelegant and clumsy way
+    - MTU is 8500 bytes (VPN is 1500)
+    - transit gateway route table
+
+## Networking
+
+- **Application Load Balancer**
+    - If a target group contains only unhealthy registered targets, the load balancer nodes route requests across its unhealthy targets
+
+- **Security Group**
+    - acts as a virtual firewall for EC2 instances to control incoming and outgoing traffic
+
+
 ## Miscellaneous
 
 - **CloudFront**: 
+
+
+## Monitoring
+
+- **CloudWatch**:
+
+
+## Notification
+
+- **SNS**
+
+
+- **Amazon EventBridge**: 
+
