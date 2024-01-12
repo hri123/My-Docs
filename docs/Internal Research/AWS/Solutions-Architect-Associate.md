@@ -1,4 +1,4 @@
-Design Secure Architectures: Question 45
+Design High Performing Architectures: Question 3
 
 ## IAM
 
@@ -112,6 +112,9 @@ Design Secure Architectures: Question 45
     - instances in VPC to and from internet vs prevent the instances from receiving inbound traffic initiated by someone on the Internet
 
 - **NAT Gateway** vs **NAT instance**
+  - NAT instance can be used as a bastion server
+  - Security Groups can be associated with a NAT instance
+  - NAT instance supports port forwarding
 
 - **NACL** vs **Security Group**
 
